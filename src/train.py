@@ -121,8 +121,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     # setting the evaluation metrics
-    cer_metric = load_metric("cer")
-    wer_metric = load_metric('wer')
+    cer_metric = load_metric("cer", trust_remote_code=True)
+    wer_metric = load_metric('wer', trust_remote_code=True)
 
     if args.train == True:
         
